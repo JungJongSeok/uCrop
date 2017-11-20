@@ -40,8 +40,6 @@ public class UCrop {
     public static final String EXTRA_OUTPUT_CROP_ASPECT_RATIO = EXTRA_PREFIX + ".CropAspectRatio";
     public static final String EXTRA_OUTPUT_IMAGE_WIDTH = EXTRA_PREFIX + ".ImageWidth";
     public static final String EXTRA_OUTPUT_IMAGE_HEIGHT = EXTRA_PREFIX + ".ImageHeight";
-    public static final String EXTRA_OUTPUT_OFFSET_X = EXTRA_PREFIX + ".OffsetX";
-    public static final String EXTRA_OUTPUT_OFFSET_Y = EXTRA_PREFIX + ".OffsetY";
     public static final String EXTRA_ERROR = EXTRA_PREFIX + ".Error";
 
     public static final String EXTRA_ASPECT_RATIO_X = EXTRA_PREFIX + ".AspectRatioX";
@@ -259,7 +257,6 @@ public class UCrop {
 
         public static final String EXTRA_TOOL_BAR_COLOR = EXTRA_PREFIX + ".ToolbarColor";
         public static final String EXTRA_STATUS_BAR_COLOR = EXTRA_PREFIX + ".StatusBarColor";
-        public static final String EXTRA_UCROP_COLOR_WIDGET_ACTIVE = EXTRA_PREFIX + ".UcropColorWidgetActive";
 
         public static final String EXTRA_UCROP_WIDGET_COLOR_TOOLBAR = EXTRA_PREFIX + ".UcropToolbarWidgetColor";
         public static final String EXTRA_UCROP_TITLE_TEXT_TOOLBAR = EXTRA_PREFIX + ".UcropToolbarTitleText";
@@ -268,7 +265,6 @@ public class UCrop {
 
         public static final String EXTRA_UCROP_LOGO_COLOR = EXTRA_PREFIX + ".UcropLogoColor";
 
-        public static final String EXTRA_HIDE_BOTTOM_CONTROLS = EXTRA_PREFIX + ".HideBottomControls";
         public static final String EXTRA_FREE_STYLE_CROP = EXTRA_PREFIX + ".FreeStyleCrop";
 
         public static final String EXTRA_ASPECT_RATIO_SELECTED_BY_DEFAULT = EXTRA_PREFIX + ".AspectRatioSelectedByDefault";
@@ -423,13 +419,6 @@ public class UCrop {
         }
 
         /**
-         * @param color - desired resolved color of the active and selected widget (default is orange) and progress wheel middle line
-         */
-        public void setActiveWidgetColor(@ColorInt int color) {
-            mOptionBundle.putInt(EXTRA_UCROP_COLOR_WIDGET_ACTIVE, color);
-        }
-
-        /**
          * @param color - desired resolved color of Toolbar text and buttons (default is darker orange)
          */
         public void setToolbarWidgetColor(@ColorInt int color) {
@@ -462,13 +451,6 @@ public class UCrop {
          */
         public void setLogoColor(@ColorInt int color) {
             mOptionBundle.putInt(EXTRA_UCROP_LOGO_COLOR, color);
-        }
-
-        /**
-         * @param hide - set to true to hide the bottom controls (shown by default)
-         */
-        public void setHideBottomControls(boolean hide) {
-            mOptionBundle.putBoolean(EXTRA_HIDE_BOTTOM_CONTROLS, hide);
         }
 
         /**
